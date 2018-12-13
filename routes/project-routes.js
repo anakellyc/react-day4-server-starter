@@ -6,6 +6,7 @@ const router = express.Router();
 
 // GET route => to get all the projects
 router.get("/projects", (req, res, next) => {
+  debugger;
   Project.find()
     .populate("tasks")
     .then(allTheProjects => {
